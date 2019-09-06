@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mice Maze</title>
+
+    <style>
+        #maze {
+            font-family: Consolas, 'Lucida Console';
+            letter-spacing: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mice Maze</h1>
+
+    <div>
+        <button onclick="activateMaze(0)">Maze #1</button>
+        <button onclick="activateMaze(1)">Maze #2</button>
+        <button onclick="activateMaze(2)">Maze #3</button>
+    </div>
+    <br>
+
+    <div id="maze"></div>
+
+    <div id="solution"></div>
+
+    <script src="js/mazes.js"></script>
+    <script src="js/solution.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function activateMaze(number) {
+            let player = new Player(9, 9);
+
+            let activeMaze = maze[number];
+            printMaze(activeMaze);
+
+            solution(activeMaze, player);
+        }
+    </script>
+</body>
+</html>
