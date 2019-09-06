@@ -1,0 +1,1 @@
+Naive approach solution to the mice maze algorithm
